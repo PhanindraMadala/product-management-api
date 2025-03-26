@@ -20,4 +20,10 @@ Feature: Product Management
       | Laptop | Electronics | True        |
     When I delete the product with id 1
     Then the product should be removed from the database
+
+    Scenario: Listing All Products
+  Given the database contains multiple products
+  When I request the list of all products
+  Then I should receive a list of all available products
+
  
